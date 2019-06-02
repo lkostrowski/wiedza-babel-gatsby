@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import SEO from '../components/seo';
 
-const Homepage = () => {
+const Homepage = (p) => {
+    console.log(p);
+
     return (
         <div>
             <SEO />
@@ -15,5 +17,16 @@ const Homepage = () => {
         </div>
     );
 };
+
+export const query = graphql`
+    query {
+        site {
+            siteMetadata {
+                title,
+                description
+            }
+        }
+    }
+`;
 
 export default Homepage;

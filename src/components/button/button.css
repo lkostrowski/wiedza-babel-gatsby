@@ -1,0 +1,17 @@
+.button {
+    background: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--coral);
+    border-radius: 4px;
+    box-shadow: 3px 3px 0 0 var(--blue);
+    height: 40px;
+    padding: 0 20px;
+    border: none;
+    white-space: nowrap;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.icon-left {
+}

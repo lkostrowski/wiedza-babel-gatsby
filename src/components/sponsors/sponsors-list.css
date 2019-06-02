@@ -1,0 +1,18 @@
+.headline {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.list > * {
+    flex: 0 0 130px;
+    width: 130px;
+}

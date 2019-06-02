@@ -1,0 +1,14 @@
+.photos {
+    display: flex;
+}
+
+.photo-container {
+    flex: 0 0 33.333%;
+    width: 33.333%;
+    max-width: 33.333%;
+}
+
+.photo {
+    height: 100%;
+
+}

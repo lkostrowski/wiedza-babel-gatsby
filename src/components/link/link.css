@@ -1,0 +1,20 @@
+.link {
+    color: var(--blue);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--light-blue);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.link:hover {
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+@media (max-width: 1023px) {
+    .link {
+        font-size: 14px;
+    }
+}

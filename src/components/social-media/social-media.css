@@ -1,0 +1,18 @@
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a3fd8;
+}
+
+.link {
+    width: 45px;
+    height: 45px;
+    margin: 45px 10px;
+    transition: 0.2s;
+}
+
+
+.link:hover {
+    color: #587CED;
+}
