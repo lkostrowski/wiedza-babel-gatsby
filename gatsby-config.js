@@ -46,7 +46,12 @@ module.exports = {
                 path: `${__dirname}/src/content/events`,
             },
         },
-        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: ["gatsby-remark-copy-linked-files"],
+            },
+        },
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {

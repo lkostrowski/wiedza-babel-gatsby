@@ -14,6 +14,7 @@ import { compose, mapProps } from 'recompose';
 import { Event } from '../components/event/event';
 
 const Homepage = ({ events }) => {
+    console.log(events)
     return (
         <main>
             <SEO />
@@ -40,7 +41,7 @@ export const query = graphql`
                 description
             }
         }
-        allMarkdownRemark {
+        allMarkdownRemark(sort: {fields: frontmatter___number, order: DESC}) {
             edges {
                 node {
                     frontmatter {
@@ -88,6 +89,8 @@ export default compose(
             .map((edge) => edge.node.frontmatter)
             .map((event) => {
                 const photos = props.data.allFile.nodes.map((p) => p.publicURL);
+
+                console.log(event)
 
                 const speakers = event.talks.map((talk) => {
                     const photo = talk.photo;
