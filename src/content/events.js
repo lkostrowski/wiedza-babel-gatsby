@@ -1,46 +1,5 @@
 module.exports = [
-    {
-        upcoming: false,
-        cover:
-            '/static/events/object-oriented-design/wiedza-babel-1-object-oriented-design.jpg',
-        date: '22.05.2018',
-        number: 1,
-        topic: 'Object Oriented Design',
-        speakers: [
-            {
-                speaker: 'Magdalena Ruta',
-                photo: '/static/events/object-oriented-design/magdalena_ruta.png',
-                topic: 'Na co komu styleguide?',
-                linkedin: 'https://www.linkedin.com/in/magdalenaruta/',
-            },
-            {
-                speaker: 'Łukasz Ostrowski',
-                photo: '/static/events/object-oriented-design/l_ostrowski.png',
-                topic: 'Tworzenie frontendowych bibliotek komponentów',
-                linkedin: 'https://www.linkedin.com/in/lukaszostrowski1/',
-                website: 'https://ostrowski.ninja',
-            },
-            {
-                speaker: 'Maciek Pałubicki',
-                photo: '/static/events/object-oriented-design/m_palubicki.png',
-                linkedin: 'https://www.linkedin.com/in/maciejpalubicki/',
-                topic:
-                    'Dwa światy – jak płynnie przejść od etapu projektowania do programowania i uzyskać efekt realizujący cele klienta?',
-            },
-        ],
-        links: [
-            {
-                label: 'Wydarzenie na FB',
-                href: 'https://www.facebook.com/events/194022894722794/',
-            },
-            {
-                label: 'Nagrania',
-                href:
-                    'https://www.youtube.com/watch?v=WEPQGqXTqrM&list=PLniHkGVeq9FmdWIUqQE-ocOxb8dwEfBLZ',
-            },
-        ],
-        slug: 'object-oriented-design',
-    },
+
     {
         upcoming: false,
         cover:

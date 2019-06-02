@@ -1,8 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
 
-import lin from '../../icons/social/linkedin.svg';
-import link from '../../icons/link.svg';
+import LinkedIn from '../../icons/social/linkedin.svg';
+import Website from '../../icons/link.svg';
 import { Link } from '../link/link';
 
 import styles from './event.module.scss';
@@ -21,7 +21,7 @@ const SpeakerAndTalk = ({ speaker, topic, photo, linkedin, website }) => (
                         href={linkedin}
                         target="_blank"
                     >
-                        <img src={lin} />
+                        <LinkedIn alt="LinkedIn" />
                     </a>
                 )}
                 {website && (
@@ -31,7 +31,7 @@ const SpeakerAndTalk = ({ speaker, topic, photo, linkedin, website }) => (
                         href={website}
                         target="_blank"
                     >
-                        <img src={link} />
+                        <Website alt="Strona internetowa" />
                     </a>
                 )}
             </div>
@@ -45,31 +45,34 @@ export const Event = ({
     date,
     number,
     topic,
-    speakers,
+    talks,
     links,
-}) => (
-    <div className={styles.event} data-event-element>
-        {upcoming && (
-            <span className={styles.isUpcomingBadge}>Już wkrótce</span>
-        )}
-        <img
-            className={cx(styles.image, { [styles.past]: !upcoming })}
-            src={cover}
-        />
-        <span className={styles.date}>{date} - </span>
-        <h2 className={styles.eventNumber}>Wiedza Babel #{number}</h2>
-        <h1 className={styles.topic}>{topic}</h1>
-        <div className={styles.speakersList}>
-            {speakers.map((speaker) => (
-                <SpeakerAndTalk key={speaker.topic} {...speaker} />
-            ))}
+    slug,
+}) => {
+    return (
+        <div className={styles.event} data-event-element>
+            {upcoming && (
+                <span className={styles.isUpcomingBadge}>Już wkrótce</span>
+            )}
+            <img
+                className={cx(styles.image, { [styles.past]: !upcoming })}
+                src={cover}
+            />
+            <span className={styles.date}>{date} - </span>
+            <h2 className={styles.eventNumber}>Wiedza Babel #{number}</h2>
+            <h1 className={styles.topic}>{topic}</h1>
+            <div className={styles.speakersList}>
+                {talks.map((talk) => (
+                    <SpeakerAndTalk key={talk.topic} {...talk} />
+                ))}
+            </div>
+            <div className={styles.links}>
+                {links.map((link) => (
+                    <Link key={link.href} target="_blank" href={link.href}>
+                        {link.label}
+                    </Link>
+                ))}
+            </div>
         </div>
-        <div className={styles.links}>
-            {links.map((link) => (
-                <Link key={link.href} target="_blank" href={link.href}>
-                    {link.label}
-                </Link>
-            ))}
-        </div>
-    </div>
-);
+    );
+};

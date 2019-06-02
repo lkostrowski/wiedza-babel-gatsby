@@ -22,8 +22,6 @@ export const Photos = () => {
 
     const photos = data.allFile.edges.map((f) => f.node.publicURL);
 
-    console.log(data)
-
     return (
         <div className={styles.photos}>
             {photos.map((photo) => (

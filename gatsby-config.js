@@ -39,6 +39,13 @@ module.exports = {
                 path: `${__dirname}/src/content/main-page-photos`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `events`,
+                path: `${__dirname}/src/content/events`,
+            },
+        },
         `gatsby-transformer-remark`,
         {
             resolve: `gatsby-plugin-google-analytics`,

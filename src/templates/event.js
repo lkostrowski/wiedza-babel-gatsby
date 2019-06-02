@@ -6,9 +6,7 @@ export default ({ data }) => {
 
     return (
         <div>
-            <div
-                dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-            />
+            asd
         </div>
     );
 };

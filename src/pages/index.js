@@ -10,20 +10,19 @@ import { ContactBar } from '../components/contact-bar/contact-bar';
 import { SocialMedia } from '../components/social-media/social-media';
 
 import styles from './index.module.scss';
+import { compose, mapProps } from 'recompose';
+import { Event } from '../components/event/event';
 
-const Homepage = (p) => {
-    console.log(p);
-
+const Homepage = ({ events }) => {
     return (
         <main>
             <SEO />
             <Header />
             <CtaBar className={styles.ctaBar} />
             <div className={styles.eventsList}>
-                {/*{eventsFromNewest.map((event) => (*/}
-                {/*    <Event key={event.number} {...event} />*/}
-                {/*))}*/}
-                content
+                {events.map((event) => (
+                    <Event key={event.number} {...event} />
+                ))}
             </div>
             <Photos />
             <SponsorsList />
@@ -41,7 +40,63 @@ export const query = graphql`
                 description
             }
         }
+        allMarkdownRemark {
+            edges {
+                node {
+                    frontmatter {
+                        slug
+                        title
+                        talks {
+                            speaker
+                            topic
+                            linkedin
+                            website
+                            photo
+                        }
+                        topic
+                        upcoming
+                        number
+                        date
+                        links {
+                            href
+                            label
+                        }
+                    }
+                }
+            }
+        }
+        allFile(
+            filter: {
+                sourceInstanceName: { eq: "events" }
+                relativeDirectory: { glob: "*/speakers" }
+            }
+        ) {
+            nodes {
+                publicURL
+            }
+        }
     }
 `;
 
-export default Homepage;
+/**
+ * TODO: This should be all in GQL query
+ */
+export default compose(
+    mapProps((props) => ({
+        ...props,
+        events: props.data.allMarkdownRemark.edges
+            .map((edge) => edge.node.frontmatter)
+            .map((event) => {
+                const photos = props.data.allFile.nodes.map((p) => p.publicURL);
+
+                const speakers = event.talks.map((talk) => {
+                    const photo = talk.photo;
+                    const photoUrl = photos.find((p) => p.includes(photo));
+
+                    return { ...talk, photo: photoUrl };
+                });
+
+                return { ...event, talks: speakers };
+            }),
+    })),
+)(Homepage);
