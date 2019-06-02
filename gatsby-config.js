@@ -22,6 +22,7 @@ module.exports = {
             options: {
                 name: `pages`,
                 path: `${__dirname}/src/pages`,
+                ignore: ['*.scss'],
             },
         },
         {
