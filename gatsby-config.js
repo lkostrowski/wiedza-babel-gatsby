@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `Wiedza Babel`,
-        description: `Łączymy różne języki w IT`,
+        description: `Rutynowe spotkania o współpracy biznesu, designu i programowania.`,
         author: `Łukasz Ostrowski`,
     },
     plugins: [
@@ -25,5 +25,11 @@ module.exports = {
             },
         },
         `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: 'UA-119172528-2',
+            },
+        },
     ],
 };

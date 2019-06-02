@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
@@ -45,6 +38,15 @@ function SEO({ description, lang, meta, title }) {
                     content: title,
                 },
                 {
+                    property: `og:site_name`,
+                    content: title,
+                },
+                {
+                    // TODO: Not metadata?
+                    property: `og:url`,
+                    content: 'https://www.wiedzababel.pl/',
+                },
+                {
                     property: `og:description`,
                     content: metaDescription,
                 },
@@ -68,8 +70,60 @@ function SEO({ description, lang, meta, title }) {
                     name: `twitter:description`,
                     content: metaDescription,
                 },
+                {
+                    name: `fb:app_id`,
+                    content: '1901383829914480', // TODO: Meta
+                },
+                {
+                    name: `og:image:secure_url`,
+                    content: 'https://www.wiedzababel.pl/wb-cover.jpg',
+                },
+                {
+                    name: `og:image:url`,
+                    content: 'https://www.wiedzababel.pl/wb-cover.jpg',
+                },
+                {
+                    name: `og:image`,
+                    content: 'https://www.wiedzababel.pl/wb-cover.jpg',
+                },
+                {
+                    name: `og:image:type`,
+                    content: 'images/jpeg',
+                },
+                {
+                    name: `og:image:width`,
+                    content: '695',
+                },
+                {
+                    name: `og:image:height`,
+                    content: '388',
+                },
             ].concat(meta)}
-        />
+        >
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+            <link
+                rel="apple-touch-icon"
+                sizes="180x180"
+                href="/favicons/apple-touch-icon.png"
+            />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="32x32"
+                href="/favicons/favicon-32x32.png"
+            />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="16x16"
+                href="/favicons/favicon-16x16.png"
+            />
+            <meta name="msapplication-TileColor" content="#da532c" />
+            <meta name="theme-color" content="#da532c" />
+        </Helmet>
     );
 }
 
