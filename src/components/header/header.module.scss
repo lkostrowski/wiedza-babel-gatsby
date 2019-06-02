@@ -4,7 +4,7 @@
             rgba(26, 63, 216, 0.7) 0%,
             rgba(26, 63, 216, 0.7) 100%
         ),
-        url('/static/cover.jpg');
+        url('/cover.jpg');
     height: calc(100vh - 118px);
     background-position: center;
     background-size: cover;
@@ -37,12 +37,13 @@
 
 
 .sm {
-    color: #fff !important;
+    color: var(--white) !important;
 }
 
 .arrow {
     width: 40px;
     margin-bottom: 100px;
+    color: var(--white);
 }
 
 @media (max-width: 1023px) {
