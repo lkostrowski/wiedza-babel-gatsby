@@ -14,6 +14,7 @@ export const SocialMedia = ({ className }) => {
                 className={styles.link}
                 href="https://www.facebook.com/wiedzababel"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 <FbIcon />
             </a>
@@ -21,6 +22,7 @@ export const SocialMedia = ({ className }) => {
                 className={styles.link}
                 href="https://www.youtube.com/channel/UC9dIPxtP959IWnGnux0v2oQ"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 <YtIcon />
             </a>
@@ -28,6 +30,7 @@ export const SocialMedia = ({ className }) => {
                 className={styles.link}
                 href="https://www.linkedin.com/company/wiedza-babel/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 <LinIcon />
             </a>
@@ -35,6 +38,7 @@ export const SocialMedia = ({ className }) => {
                 className={styles.link}
                 href="https://www.instagram.com/wiedzababel/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 <IgIcon />
             </a>

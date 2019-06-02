@@ -6,7 +6,9 @@ import { SocialMedia } from '../social-media/social-media';
 import Arrow from '../../icons/arrow_in_circle.svg';
 
 export const Header = () => {
-    const onScroll = () => {
+    const onScroll = (e) => {
+        e.preventDefault();
+
         document
             .querySelector('[data-event-element]')
             .scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -15,7 +17,11 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.top}>
-                <img src="/WB_logo_horizontal.svg" className={styles.logo} />
+                <img
+                    src="/WB_logo_horizontal.svg"
+                    className={styles.logo}
+                    alt="Logo"
+                />
                 <div>
                     <SocialMedia className={styles.sm} />
                 </div>
@@ -26,9 +32,9 @@ export const Header = () => {
                 <br />
                 designu i programowania.
             </p>
-            <a role="button" onClick={onScroll}>
+            <button className={styles.button} onClick={onScroll}>
                 <Arrow className={styles.arrow} />
-            </a>
+            </button>
         </header>
     );
 };

@@ -7,7 +7,7 @@ export const Photos = () => (
     <div className={styles.photos}>
         {photos.map((photo) => (
             <div key={photo} className={styles.photoContainer}>
-                <img src={photo} className={styles.photo} />
+                <img src={photo} className={styles.photo} alt="Zdjęcie z wydarzenia" />
             </div>
         ))}
     </div>

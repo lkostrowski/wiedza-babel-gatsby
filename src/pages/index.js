@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import SEO from '../components/seo/seo';
 import { Header } from '../components/header/header';

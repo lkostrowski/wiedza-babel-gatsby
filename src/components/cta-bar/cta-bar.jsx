@@ -10,7 +10,7 @@ export const CtaBar = ({ className }) => (
         <p className={styles.text}>
             Aktualności o wydarzeniach znajdziesz na naszym Facebooku
         </p>
-        <a target="_blank" href="https://www.facebook.com/wiedzababel">
+        <a target="_blank" href="https://www.facebook.com/wiedzababel" rel="noopener noreferrer">
             <Button>
                 <Fb className={styles.fb} /> Obserwuj nas
             </Button>

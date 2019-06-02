@@ -35,7 +35,6 @@
     color: var(--white);
 }
 
-
 .sm {
     color: var(--white) !important;
 }
@@ -59,4 +58,12 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+
+.button {
+    background: none;
+    display: block;
+    padding: 0;
+    outline: none;
+    border: none;
 }

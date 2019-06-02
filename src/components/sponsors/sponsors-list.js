@@ -25,7 +25,7 @@ export const SponsorsList = () => {
             <h2 className={styles.headline}>Sponsorzy</h2>
             {logos.map((sponsor) => (
                 <div className={styles.list} key={sponsor}>
-                    <img src={sponsor} />
+                    <img src={sponsor} alt="Logo sponsora" />
                 </div>
             ))}
         </div>
