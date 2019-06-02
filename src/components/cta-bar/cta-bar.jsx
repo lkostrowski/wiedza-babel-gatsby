@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import { Button } from '../button/button';
 import styles from './cta-bar.module.scss';
-import fb from '../../icons/fb-button.svg';
+import fb from '../../icons/social/fb-button.svg';
 
 export const CtaBar = ({ className }) => (
     <div className={cx(styles.ctaBar, className)}>

@@ -31,5 +31,13 @@ module.exports = {
                 trackingId: 'UA-119172528-2',
             },
         },
+        {
+            resolve: 'gatsby-plugin-react-svg',
+            options: {
+                rule: {
+                    include: /icons/,
+                },
+            },
+        },
     ],
 };

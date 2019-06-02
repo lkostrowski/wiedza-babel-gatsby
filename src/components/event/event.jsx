@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import lin from '../../icons/linkedin.svg';
+import lin from '../../icons/social/linkedin.svg';
 import link from '../../icons/link.svg';
 import { Link } from '../link/link';
 

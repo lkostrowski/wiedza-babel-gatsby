@@ -1,7 +1,7 @@
 import React from 'react';
 import { sponsors } from '../../content/sponsors';
 
-import styles from './sponsors-list.css'
+import styles from './sponsors-list.module.scss'
 
 export const SponsorsList = () => (
     <div>

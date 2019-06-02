@@ -2,10 +2,10 @@ import cx from 'classnames';
 import React from 'react';
 
 import styles from './social-media.module.scss';
-import { FbIcon } from '../../icons/fb';
-import YtIcon from '../../icons/yt';
-import LinIcon from '../../icons/lin';
-import IgIcon from '../../icons/instagram';
+import FbIcon  from '../../icons/social/fb.svg';
+import YtIcon from '../../icons/social/yt.svg';
+import LinIcon from '../../icons/social/linkedin.svg';
+import IgIcon from '../../icons/social/instagram.svg';
 
 export const SocialMedia = ({ className }) => {
     return (
