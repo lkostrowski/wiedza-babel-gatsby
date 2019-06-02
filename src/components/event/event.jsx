@@ -9,7 +9,7 @@ import styles from './event.module.scss';
 
 const SpeakerAndTalk = ({ speaker, topic, photo, linkedin, website }) => (
     <div className={styles.speakerItem}>
-        <img src={photo} className={styles.photo} />
+        <img src={photo.childImageSharp.fluid.src} className={styles.photo} />
         <div>
             <p className={styles.speakerName}>{speaker}</p>
             <p className={styles.speakerTopic}>{topic}</p>
@@ -49,6 +49,8 @@ export const Event = ({
     links,
     slug,
 }) => {
+    console.log(talks)
+
     return (
         <div className={styles.event} data-event-element>
             {upcoming && (
@@ -56,7 +58,7 @@ export const Event = ({
             )}
             <img
                 className={cx(styles.image, { [styles.past]: !upcoming })}
-                src={cover}
+                src={cover.childImageSharp.fluid.src}
             />
             <span className={styles.date}>{date} - </span>
             <h2 className={styles.eventNumber}>Wiedza Babel #{number}</h2>

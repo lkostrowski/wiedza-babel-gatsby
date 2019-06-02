@@ -4,6 +4,7 @@ date: 11.09.2018
 number: 2
 topic: 'Projektujemy dostępność'
 slug: "projektujemy-dostepnosc"
+cover: ./wiedza-babel-2-projektujemy-dostepnosc.jpg
 links:
     -
         label: 'Wydarzenie na FB'
@@ -17,17 +18,17 @@ links:
 talks:
     -
         speaker: 'Piotr Socha'
-        photo: "p_socha"
+        photo: ./speakers/p_socha.png
         topic: 'Dlaczego dostępność jest elementem etyki zawodowej projektanta i jak wpływa na kulturę projektowania użyteczności?'
         linkedin: 'https://www.linkedin.com/in/piotr-socha/'
     -
         speaker: 'Przemysław Marcinkowski'
-        photo: "p_marcinkowski"
+        photo: ./speakers/p_marcinkowski.png
         topic: '...and accessibility for all'
         linkedin: 'https://www.linkedin.com/in/przemys%C5%82aw-marcinkowski-799268109/'
     -
         speaker: 'Jacek Zadrożny'
-        photo: "j_zadrony"
+        photo: ./speakers/j_zadrony.png
         topic: 'Internetowe sklepy tracą klientów, bo nie daje się z nich korzystać'
         linkedin: 'https://www.linkedin.com/in/jaczad/'
 ---

@@ -8,6 +8,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-sass`,
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -15,8 +16,7 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
+
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -49,7 +49,14 @@ module.exports = {
         {
             resolve: `gatsby-transformer-remark`,
             options: {
-                plugins: ["gatsby-remark-copy-linked-files"],
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            maxWidth: 970,
+                        },
+                    },
+                ],
             },
         },
         {
@@ -66,5 +73,7 @@ module.exports = {
                 },
             },
         },
+        `gatsby-transformer-sharp`,
+
     ],
 };

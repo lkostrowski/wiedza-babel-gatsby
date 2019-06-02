@@ -52,7 +52,13 @@ export const query = graphql`
                             topic
                             linkedin
                             website
-                            photo
+                            photo {
+                                childImageSharp {
+                                    fluid(maxWidth: 980) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
                         }
                         topic
                         upcoming
@@ -61,6 +67,13 @@ export const query = graphql`
                         links {
                             href
                             label
+                        }
+                        cover {
+                            childImageSharp {
+                                fluid(maxWidth: 980) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
                         }
                     }
                 }
@@ -87,19 +100,19 @@ export default compose(
         ...props,
         events: props.data.allMarkdownRemark.edges
             .map((edge) => edge.node.frontmatter)
-            .map((event) => {
-                const photos = props.data.allFile.nodes.map((p) => p.publicURL);
-
-                console.log(event)
-
-                const speakers = event.talks.map((talk) => {
-                    const photo = talk.photo;
-                    const photoUrl = photos.find((p) => p.includes(photo));
-
-                    return { ...talk, photo: photoUrl };
-                });
-
-                return { ...event, talks: speakers };
-            }),
+            // .map((event) => {
+            //     const photos = props.data.allFile.nodes.map((p) => p.publicURL);
+            //
+            //     console.log(event)
+            //
+            //     const speakers = event.talks.map((talk) => {
+            //         const photo = talk.photo;
+            //         const photoUrl = photos.find((p) => p.includes(photo));
+            //
+            //         return { ...talk, photo: photoUrl };
+            //     });
+            //
+            //     return { ...event, talks: speakers };
+            // }),
     })),
 )(Homepage);
