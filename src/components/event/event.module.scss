@@ -11,7 +11,7 @@
     /*opacity: 0.5;*/
 }
 
-.is-upcoming-badge {
+.isUpcomingBadge {
     text-transform: uppercase;
     position: absolute;
     top: 0;
@@ -39,7 +39,7 @@
     margin-right: 20px;
 }
 
-.event-number {
+.eventNumber {
     font-size: 16px;
     font-weight: 400;
     margin: 0 auto 20px 0;
@@ -54,10 +54,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.speakers-list {
+.speakersList {
 }
 
-.speaker-item {
+.speakerItem {
     font-size: 18px;
     background: var(--gray);
     padding: 20px;
@@ -67,14 +67,14 @@
     align-items: center;
 }
 
-.speaker-name {
+.speakerName {
     font-weight: bold;
     font-size: 18px;
     margin: 0;
     margin-bottom: 10px;
 }
 
-.speaker-topic {
+.speakerTopic {
     font-size: 18px;
     margin: 5px 0;
 }
@@ -94,11 +94,11 @@
 }
 
 @media (max-width: 1023px) {
-    .speaker-name {
+    .speakerName {
         font-size: 16px;
     }
 
-    .speaker-topic {
+    .speakerTopic {
         font-size: 14px;
     }
 }

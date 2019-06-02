@@ -1,6 +1,9 @@
 import React from 'react';
-import styles from './header.css';
+
+import styles from './header.module.scss';
 import { SocialMedia } from '../social-media/social-media';
+
+import arrow from '../../icons/arrow_in_circle.svg';
 
 export const Header = () => {
     const onScroll = () => {
@@ -13,7 +16,7 @@ export const Header = () => {
         <header className={styles.header}>
             <div className={styles.top}>
                 <img
-                    src="/static/WB_logo_horizontal.svg"
+                    src="/WB_logo_horizontal.svg"
                     className={styles.logo}
                 />
                 <div>
@@ -29,7 +32,7 @@ export const Header = () => {
             <a role="button" onClick={onScroll}>
                 <img
                     className={styles.arrow}
-                    src="/static/arrow_in_circle.svg"
+                    src={arrow}
                 />
             </a>
         </header>

@@ -1,0 +1,21 @@
+.eventsList {
+    margin: 60px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.eventsList > * {
+    margin-bottom: 150px;
+}
+
+.ctaBar {
+
+}
+
+@media (max-width: 1023px) {
+    .eventsList > * {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+}

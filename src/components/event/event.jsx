@@ -1,17 +1,18 @@
 import React from 'react';
 import cx from 'classnames';
-import lin from '../../static/linkedin.svg';
-import link from '../../static/link.svg';
 
+import lin from '../../icons/linkedin.svg';
+import link from '../../icons/link.svg';
 import { Link } from '../link/link';
-import styles from './event.css';
+
+import styles from './event.module.scss';
 
 const SpeakerAndTalk = ({ speaker, topic, photo, linkedin, website }) => (
-    <div className={styles['speaker-item']}>
+    <div className={styles.speakerItem}>
         <img src={photo} className={styles.photo} />
         <div>
-            <p className={styles['speaker-name']}>{speaker}</p>
-            <p className={styles['speaker-topic']}>{topic}</p>
+            <p className={styles.speakerName}>{speaker}</p>
+            <p className={styles.speakerTopic}>{topic}</p>
             <div className={styles.social}>
                 {linkedin && (
                     <a
@@ -49,16 +50,16 @@ export const Event = ({
 }) => (
     <div className={styles.event} data-event-element>
         {upcoming && (
-            <span className={styles['is-upcoming-badge']}>Już wkrótce</span>
+            <span className={styles.isUpcomingBadge}>Już wkrótce</span>
         )}
         <img
             className={cx(styles.image, { [styles.past]: !upcoming })}
             src={cover}
         />
         <span className={styles.date}>{date} - </span>
-        <h2 className={styles['event-number']}>Wiedza Babel #{number}</h2>
+        <h2 className={styles.eventNumber}>Wiedza Babel #{number}</h2>
         <h1 className={styles.topic}>{topic}</h1>
-        <div className={styles['speakers-list']}>
+        <div className={styles.speakersList}>
             {speakers.map((speaker) => (
                 <SpeakerAndTalk key={speaker.topic} {...speaker} />
             ))}

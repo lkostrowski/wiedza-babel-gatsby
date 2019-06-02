@@ -1,4 +1,4 @@
-.cta-bar {
+.ctaBar {
     background: var(--coral);
     padding: 30px;
     display: flex;
@@ -15,7 +15,7 @@
 }
 
 @media (max-width: 1023px) {
-    .cta-bar {
+    .ctaBar {
         display: block;
         text-align: center;
     }

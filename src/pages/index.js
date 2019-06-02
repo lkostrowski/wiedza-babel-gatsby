@@ -2,19 +2,34 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import SEO from '../components/seo/seo';
+import { Header } from '../components/header/header';
+import { CtaBar } from '../components/cta-bar/cta-bar';
+import { Photos } from '../components/photos/photos';
+import { SponsorsList } from '../components/sponsors/sponsors-list';
+import { ContactBar } from '../components/contact-bar/contact-bar';
+import { SocialMedia } from '../components/social-media/social-media';
+
+import styles from './index.module.scss';
 
 const Homepage = (p) => {
     console.log(p);
 
     return (
-        <div>
+        <main>
             <SEO />
-            <h1>Hi people</h1>
-            <p>Welcome to your new Gatsby site.</p>
-            <p>Now go build something great.</p>
-
-            <Link to="/page-2/">Go to page 2</Link>
-        </div>
+            <Header />
+            <CtaBar className={styles.ctaBar} />
+            <div className={styles.eventsList}>
+                {/*{eventsFromNewest.map((event) => (*/}
+                {/*    <Event key={event.number} {...event} />*/}
+                {/*))}*/}
+                content
+            </div>
+            <Photos />
+            <SponsorsList />
+            <ContactBar />
+            <SocialMedia />
+        </main>
     );
 };
 
@@ -22,7 +37,7 @@ export const query = graphql`
     query {
         site {
             siteMetadata {
-                title,
+                title
                 description
             }
         }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { sponsors } from '../../content/sponsors';
 
 import styles from './sponsors-list.css'
