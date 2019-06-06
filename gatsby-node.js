@@ -4,7 +4,7 @@ const path = require(`path`);
 exports.onCreateNode = ({ node, getNode, actions }) => {};
 
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions;
+    const { createPage, createRedirect } = actions;
 
     return graphql(`
         {
@@ -13,22 +13,30 @@ exports.createPages = ({ graphql, actions }) => {
                     node {
                         frontmatter {
                             slug
+                            number
                         }
                     }
                 }
             }
         }
     `).then((result) => {
-        result.data.allMarkdownRemark.edges
-            .map((edge) => edge.node.frontmatter.slug)
-            .forEach((slug) => {
-                createPage({
-                    path: slug,
-                    component: path.resolve(`./src/templates/event.js`),
-                    context: {
-                        slug: slug,
-                    },
-                });
+        result.data.allMarkdownRemark.edges.forEach((edge) => {
+            const { slug, number } = edge.node.frontmatter;
+
+            createPage({
+                path: slug,
+                component: path.resolve(`./src/templates/event.js`),
+                context: {
+                    slug,
+                },
             });
+
+            createRedirect({
+                fromPath: `/${number}`,
+                isPermanent: true,
+                toPath: slug,
+                redirectInBrowser: true,
+            });
+        });
     });
 };
