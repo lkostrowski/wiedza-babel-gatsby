@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.sm {
+    fill: var(--blue);
+}
+
+.logo {
+    max-width: 285px;
+}
+
+.headerLink {
+    align-items: center;
+    display: flex;
+}

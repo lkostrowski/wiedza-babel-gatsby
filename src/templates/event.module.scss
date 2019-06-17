@@ -1,0 +1,39 @@
+.eventName {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+.eventTopic {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--coral);
+    text-transform: uppercase;
+}
+
+.content {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 0 20px;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 20px;
+    }
+
+    a {
+        display: block;
+        color: var(--blue);
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

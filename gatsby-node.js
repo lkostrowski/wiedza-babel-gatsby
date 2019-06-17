@@ -21,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
     `).then((result) => {
         result.data.allMarkdownRemark.edges.forEach((edge) => {
+            console.log(edge);
             const { slug, number } = edge.node.frontmatter;
 
             createPage({
@@ -31,12 +32,12 @@ exports.createPages = ({ graphql, actions }) => {
                 },
             });
 
-            createRedirect({
-                fromPath: `/${number}`,
-                isPermanent: true,
-                toPath: slug,
-                redirectInBrowser: true,
-            });
+            // createRedirect({
+            //     fromPath: `/${number}`,
+            //     isPermanent: true,
+            //     toPath: slug,
+            //     redirectInBrowser: true,
+            // });
         });
     });
 };
