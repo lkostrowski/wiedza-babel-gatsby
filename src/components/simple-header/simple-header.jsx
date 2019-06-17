@@ -8,8 +8,6 @@ export const SimpleHeader = () => (
         <a href="/" className={styles.headerLink}>
             <img src="/logo-color.svg" className={styles.logo} alt="Logo" />
         </a>
-        <div>
-            <SocialMedia className={styles.sm} />
-        </div>
+        <SocialMedia className={styles.sm} />
     </header>
 );

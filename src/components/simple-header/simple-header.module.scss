@@ -3,10 +3,19 @@
     justify-content: space-between;
     max-width: 1140px;
     margin: 0 auto;
+
+    @media (max-width: 400px){
+        justify-content: center;
+        padding: 30px 0;
+    }
 }
 
 .sm {
     fill: var(--blue);
+
+    @media (max-width: 400px){
+        display: none !important;
+    }
 }
 
 .logo {
