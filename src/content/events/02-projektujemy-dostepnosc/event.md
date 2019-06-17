@@ -14,7 +14,7 @@ links:
         href: 'https://www.youtube.com/watch?v=7eg3pJMuzYc&list=PLniHkGVeq9Fku1frA-llZJrODsNeBkA-z'
     -
         label: Paczka wiedzy
-        href: 'https://www.facebook.com/wiedzababel/photos/a.1917390904980439/2126044430781751/'
+        href: 'https://www.wiedzababel.pl/projektujemy-dostepnosc/'
 talks:
     -
         speaker: 'Piotr Socha'
