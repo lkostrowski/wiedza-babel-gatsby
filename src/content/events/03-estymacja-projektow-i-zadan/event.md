@@ -73,3 +73,4 @@ Aleksander Osterwalder: [Strategyzer](https://platform.strategyzer.com)
 
 🔸 [Blog 5min columns](https://medium.com/5min-columns) — Martin Hudymač
 
+➡️ Tomasz Marciszewski: [Jak się mylić z gracją i wdziękiem - czyli estymacje czasu [PL] - WarsawJS](https://www.youtube.com/watch?v=JysRv6J1ArE)
