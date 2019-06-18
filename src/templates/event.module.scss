@@ -35,5 +35,12 @@
         font-size: 16px;
         overflow: hidden;
         text-overflow: ellipsis;
+        transition: 0.2s;
+
+        &:hover {
+            position: relative;
+            background: var(--light-blue);
+            color: var(--white);
+        }
     }
 }
