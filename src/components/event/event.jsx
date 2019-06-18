@@ -3,7 +3,6 @@ import cx from 'classnames';
 
 import LinkedIn from '../../icons/social/linkedin.svg';
 import Website from '../../icons/link.svg';
-import Company from '../../icons/company.svg';
 import { Link } from '../link/link';
 
 import styles from './event.module.scss';
@@ -33,16 +32,6 @@ const SpeakerAndTalk = ({ speaker, topic, photo, linkedin, website, company }) =
                         target="_blank"
                     >
                         <Website alt="Strona internetowa" />
-                    </a>
-                )}
-                {company && (
-                    <a
-                        className={styles.link}
-                        title="Firma"
-                        href={company}
-                        target="_blank"
-                    >
-                        <Company alt="Firma" />
                     </a>
                 )}
             </div>
