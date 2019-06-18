@@ -3,11 +3,12 @@ import cx from 'classnames';
 
 import LinkedIn from '../../icons/social/linkedin.svg';
 import Website from '../../icons/link.svg';
+import Company from '../../icons/company.svg';
 import { Link } from '../link/link';
 
 import styles from './event.module.scss';
 
-const SpeakerAndTalk = ({ speaker, topic, photo, linkedin, website }) => (
+const SpeakerAndTalk = ({ speaker, topic, photo, linkedin, website, company }) => (
     <div className={styles.speakerItem}>
         <img src={photo.childImageSharp.fluid.src} className={styles.photo} />
         <div>
@@ -34,6 +35,16 @@ const SpeakerAndTalk = ({ speaker, topic, photo, linkedin, website }) => (
                         <Website alt="Strona internetowa" />
                     </a>
                 )}
+                {company && (
+                    <a
+                        className={styles.link}
+                        title="Firma"
+                        href={company}
+                        target="_blank"
+                    >
+                        <Company alt="Firma" />
+                    </a>
+                )}
             </div>
         </div>
     </div>
@@ -49,8 +60,6 @@ export const Event = ({
     links,
     slug,
 }) => {
-    console.log(talks)
-
     return (
         <div className={styles.event} data-event-element>
             {upcoming && (

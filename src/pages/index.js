@@ -14,7 +14,6 @@ import { compose, mapProps } from 'recompose';
 import { Event } from '../components/event/event';
 
 const Homepage = ({ events }) => {
-    console.log(events)
     return (
         <main>
             <SEO />
@@ -52,6 +51,7 @@ export const query = graphql`
                             topic
                             linkedin
                             website
+                            company
                             photo {
                                 childImageSharp {
                                     fluid(maxWidth: 980) {
