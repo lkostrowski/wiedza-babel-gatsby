@@ -33,3 +33,18 @@ talks:
         linkedin: 'https://www.linkedin.com/in/maciejpalubicki/'
         company: 'http://bluepaprica.com/'
 ---
+
+🗣 Łukasz Ostrowski - Tworzenie frontendowych bibliotek UI - prezentacja
+https://www.slideshare.net/ukaszOstrowski5/wiedza-babel-tworzenie-frontendowych-bibbliotek-ui
+
+🗣️ Magdalena Ruta - Na co komu style guide?
+https://www.slideshare.net/MagdalenaRuta/na-co-komu-style-guide-99413125
+
+📹 Nagrania z wydarzenia
+https://www.youtube.com/playlist?list=PLniHkGVeq9FmdWIUqQE-ocOxb8dwEfBLZ
+
+➡️ Storybook - narzędzie do bibliotek komponentów frontendowych
+https://storybook.js.org/
+
+➡️ React Styleguidist - narzędzie do bibliotek komponentów frontendowych
+https://react-styleguidist.js.org/
