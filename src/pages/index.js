@@ -21,7 +21,7 @@ const Homepage = ({ events }) => {
             <CtaBar className={styles.ctaBar} />
             <div className={styles.eventsList}>
                 {events.map((event) => (
-                    <Event key={event.number} {...event} />
+                    <Event key={event.index} {...event} />
                 ))}
             </div>
             <Photos />
@@ -33,86 +33,46 @@ const Homepage = ({ events }) => {
 };
 
 export const query = graphql`
-    query {
-        site {
-            siteMetadata {
-                title
-                description
-            }
-        }
-        allMarkdownRemark(sort: {fields: frontmatter___number, order: DESC}) {
+    query MyQuery {
+        allWordpressWpEvent {
             edges {
                 node {
-                    frontmatter {
-                        slug
-                        title
-                        talks {
-                            speaker
-                            topic
-                            linkedin
-                            website
+                    slug
+                    link_1
+                    link_1_label
+                    link_2
+                    link_2_label
+                    link_3
+                    link_3_label
+                    paczka_wiedzy
+                    topic
+                    wordpress_id
+                    index
+                    event_date
+                    cover {
+                        guid
+                    }
+                    talks {
+                        talk_topic
+                        speaker {
+                            speaker_name
                             company
+                            linked_in
                             photo {
-                                childImageSharp {
-                                    fluid(maxWidth: 980) {
-                                        ...GatsbyImageSharpFluid
-                                    }
-                                }
-                            }
-                        }
-                        topic
-                        upcoming
-                        number
-                        date
-                        links {
-                            href
-                            label
-                        }
-                        cover {
-                            childImageSharp {
-                                fluid(maxWidth: 980) {
-                                    ...GatsbyImageSharpFluid
-                                }
+                                guid
                             }
                         }
                     }
                 }
             }
         }
-        allFile(
-            filter: {
-                sourceInstanceName: { eq: "events" }
-                relativeDirectory: { glob: "*/speakers" }
-            }
-        ) {
-            nodes {
-                publicURL
-            }
-        }
     }
 `;
 
-/**
- * TODO: This should be all in GQL query
- */
 export default compose(
     mapProps((props) => ({
         ...props,
-        events: props.data.allMarkdownRemark.edges
-            .map((edge) => edge.node.frontmatter)
-            // .map((event) => {
-            //     const photos = props.data.allFile.nodes.map((p) => p.publicURL);
-            //
-            //     console.log(event)
-            //
-            //     const speakers = event.talks.map((talk) => {
-            //         const photo = talk.photo;
-            //         const photoUrl = photos.find((p) => p.includes(photo));
-            //
-            //         return { ...talk, photo: photoUrl };
-            //     });
-            //
-            //     return { ...event, talks: speakers };
-            // }),
+        events: props.data.allWordpressWpEvent.edges
+            .map((edge) => edge.node)
     })),
 )(Homepage);
