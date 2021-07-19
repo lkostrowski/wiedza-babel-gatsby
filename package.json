@@ -20,7 +20,7 @@
         "gatsby-remark-copy-linked-files": "^2.0.13",
         "gatsby-remark-images": "^3.0.14",
         "gatsby-source-filesystem": "^2.0.38",
-        "gatsby-source-wordpress": "^3.0.64",
+        "gatsby-source-wordpress": "^4.0.8",
         "gatsby-transformer-remark": "^2.3.12",
         "gatsby-transformer-sharp": "^2.1.21",
         "node-sass": "^4.12.0",
