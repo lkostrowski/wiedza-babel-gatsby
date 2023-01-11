@@ -21,7 +21,7 @@
         "gatsby-remark-images": "^3.0.14",
         "gatsby-source-filesystem": "^2.0.38",
         "gatsby-source-wordpress": "^3.0.64",
-        "gatsby-transformer-remark": "^2.3.12",
+        "gatsby-transformer-remark": "^5.25.1",
         "gatsby-transformer-sharp": "^2.1.21",
         "node-sass": "^4.12.0",
         "prop-types": "^15.7.2",
